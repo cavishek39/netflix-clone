@@ -18,13 +18,22 @@ export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName={Routes.HOMESCREEN}
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      tabBarOptions={{
+        activeTintColor: Colors[colorScheme].tint,
+        tabStyle: {
+          paddingBottom: 5,
+          paddingTop: 5,
+        },
+        labelStyle: { fontSize: 11 },
+      }}>
       <BottomTab.Screen
         name={Routes.HOMESCREEN}
         component={HomeTabNavigator}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => <AntDesign name='home' size={24} />,
+          tabBarIcon: ({ color }) => (
+            <AntDesign name='home' size={22} color={color} />
+          ),
         }}
       />
       <BottomTab.Screen
@@ -32,8 +41,14 @@ export default function BottomTabNavigator() {
         component={ComingSoonTabNavigator}
         options={{
           tabBarLabel: 'Coming Soon',
+          tabBarBadge: 1,
+          tabBarBadgeStyle: {
+            marginTop: -1,
+            marginLeft: 2,
+            backgroundColor: '#E74E21',
+          },
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name='video-library' size={24} color={color} />
+            <MaterialIcons name='video-library' size={22} color={color} />
           ),
         }}
       />
@@ -43,7 +58,7 @@ export default function BottomTabNavigator() {
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (
-            <Ionicons name='search' size={24} color={color} />
+            <Ionicons name='search' size={22} color={color} />
           ),
         }}
       />
@@ -53,7 +68,7 @@ export default function BottomTabNavigator() {
         options={{
           tabBarLabel: 'Downloads',
           tabBarIcon: ({ color }) => (
-            <AntDesign name='download' size={24} color={color} />
+            <AntDesign name='download' size={22} color={color} />
           ),
         }}
       />
