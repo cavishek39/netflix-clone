@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import DownloadsScreen from '../screens/DownloadsScreen'
+import DownloadsScreen from '../screens/download/DownloadsScreen'
 import { DownloadsParamList } from '../types'
 
 const DownloadStack = createStackNavigator<DownloadsParamList>()

@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import { ComingSoonParamList } from '../types'
-import ComingSoonScreen from '../screens/ComingSoonScreen'
+import ComingSoonScreen from '../screens/comingsoon/ComingSoonScreen'
 
 const ComingSoonTab = createStackNavigator<ComingSoonParamList>()
 

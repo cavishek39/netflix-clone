@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import HomeScreen from '../screens/HomeScreen'
+import HomeScreen from '../screens/home/HomeScreen'
 import { HomeParamList } from '../types'
 
 const HomeTabStack = createStackNavigator<HomeParamList>()
@@ -11,7 +11,7 @@ export function HomeTabNavigator() {
       <HomeTabStack.Screen
         name='HomeScreen'
         component={HomeScreen}
-        options={{ headerTitle: 'Home Tab Title' }}
+        options={{ headerShown: false }}
       />
     </HomeTabStack.Navigator>
   )

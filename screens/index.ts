@@ -1,7 +1,7 @@
-export * from './HomeScreen'
+export * from './home/HomeScreen'
 
-export * from './ComingSoonScreen'
+export * from './comingsoon/ComingSoonScreen'
 
-export * from './SearchScreen'
+export * from './search/SearchScreen'
 
-export * from './DownloadsScreen'
+export * from './download/DownloadsScreen'
