@@ -3,24 +3,24 @@ import {
   StackHeaderLeftButtonProps,
 } from '@react-navigation/stack'
 import React from 'react'
-import { HomeParamList } from '../types'
+import {HomeParamList} from '../types'
 import HomeScreen from '../screens/home/HomeScreen'
-import { MovieDetailsScreen } from '../screens/movie-deatils'
+import {MovieDetailsScreen} from '../screens/movie-deatils'
 
 const HomeTabStack = createStackNavigator<HomeParamList>()
 
 export function HomeTabNavigator() {
   return (
-    <HomeTabStack.Navigator initialRouteName='MovieDetailsScreen'>
+    <HomeTabStack.Navigator initialRouteName="MovieDetailsScreen">
       <HomeTabStack.Screen
-        name='HomeScreen'
+        name="HomeScreen"
         component={HomeScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <HomeTabStack.Screen
-        name='MovieDetailsScreen'
+        name="MovieDetailsScreen"
         component={MovieDetailsScreen}
-        options={{}}
+        options={{headerShown: false}}
       />
     </HomeTabStack.Navigator>
   )

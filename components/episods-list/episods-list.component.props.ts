@@ -1,10 +1,6 @@
+import {Episode} from '../../types'
+
 export interface EpisodesListComponentProps {
-  episodes: {
-    id: string
-    title: string
-    poster: string
-    duration: string
-    plot: string
-    videos: string
-  }
+  episodes: Episode
+  onPress: (episode: Episode) => any
 }
