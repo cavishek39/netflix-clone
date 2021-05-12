@@ -29,11 +29,8 @@ export const MovieDetailsScreen: React.FunctionComponent = () => {
   )
 
   return (
-    <>
-      <SafeAreaView>
-        {/* <Image style={styles.poster} source={{uri: FIRST_ITEM.poster}}/> */}
-        <VideoPlayerComponent video={currentEpisode} />
-      </SafeAreaView>
+    <View>
+      <VideoPlayerComponent video={currentEpisode} />
       <FlatList
         data={currentSession?.episodes?.items}
         renderItem={({item}) => (
@@ -125,7 +122,7 @@ export const MovieDetailsScreen: React.FunctionComponent = () => {
           </View>
         }
       />
-    </>
+    </View>
   )
 }
 
