@@ -1,10 +1,9 @@
 import * as React from 'react'
+import {View, FlatList, ScrollView} from 'react-native'
+import {SafeAreaView} from 'react-native-safe-area-context'
+import {styles} from './styles'
 import Categories from '../../assets/data/categories'
-import { HomeCategoryComponent } from '../../components'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { View } from 'react-native'
-import { styles } from '.'
-import { FlatList, ScrollView } from 'react-native-gesture-handler'
+import {HomeCategoryComponent} from '../../components'
 
 export default function HomeScreen() {
   return (

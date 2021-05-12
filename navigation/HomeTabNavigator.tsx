@@ -11,7 +11,7 @@ const HomeTabStack = createStackNavigator<HomeParamList>()
 
 export function HomeTabNavigator() {
   return (
-    <HomeTabStack.Navigator initialRouteName="MovieDetailsScreen">
+    <HomeTabStack.Navigator initialRouteName="HomeScreen">
       <HomeTabStack.Screen
         name="HomeScreen"
         component={HomeScreen}
@@ -20,7 +20,7 @@ export function HomeTabNavigator() {
       <HomeTabStack.Screen
         name="MovieDetailsScreen"
         component={MovieDetailsScreen}
-        options={{headerShown: false}}
+        options={{headerTitle: () => false}}
       />
     </HomeTabStack.Navigator>
   )
